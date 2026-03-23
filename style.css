@@ -9,7 +9,9 @@ body {
 }
 
 .header {
+    width: 100px;
     height: 55px;
+    padding: 0 2px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -161,7 +163,7 @@ body {
 }
 .notifications-count {
     position: absolute;
-    top: -5px;
+    top: -2px;
     right: -5px;
     background-color: rgb(200, 0, 0);
     color: white;
@@ -226,8 +228,10 @@ p {
 
 .video-info-grid {
     display: grid;
-    grid-template-columns: 50px 1fr;
+
 }
+
+
 
 .video-grid {
     display: grid;
@@ -236,9 +240,26 @@ p {
     row-gap: 40px;
 }
 
+
+
+
 @media (max-width: 750px) {
     .video-grid {
         grid-template-columns: 1fr 1fr;
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (min-width: 751px) and (max-width: 999px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -248,11 +269,6 @@ p {
     }
 }
 
-@media (min-width: 751px) and (max-width: 999px) {
-    .video-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
 
 .sidebar {
    position: fixed;
